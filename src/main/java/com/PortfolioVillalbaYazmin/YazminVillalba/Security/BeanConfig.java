@@ -19,6 +19,7 @@ import java.util.List;
 @Configuration
 @RequiredArgsConstructor
 public class BeanConfig{
+    
 
     private final UserDetailsImpl jpaUserDetailsService;
 
