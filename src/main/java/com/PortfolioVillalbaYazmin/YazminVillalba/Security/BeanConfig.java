@@ -16,13 +16,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.List;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
 @Configuration
 @RequiredArgsConstructor
-public class BeanConfig implements WebMvcConfigurer {
+public class BeanConfig{
 
     private final UserDetailsImpl jpaUserDetailsService;
 
@@ -57,13 +53,5 @@ public class BeanConfig implements WebMvcConfigurer {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
- @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-            .allowedOrigins("https://yazminvillalba.netlify.app")
-            .allowedMethods("GET", "POST", "PUT", "DELETE")
-            .allowCredentials(true);
-    }
-    
-    
+ 
 }
