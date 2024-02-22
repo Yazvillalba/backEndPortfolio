@@ -64,4 +64,6 @@ public class BeanConfig implements WebMvcConfigurer {
             .allowedMethods("GET", "POST", "PUT", "DELETE")
             .allowCredentials(true);
     }
+    
+    
 }
